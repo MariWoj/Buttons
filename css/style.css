@@ -1,0 +1,299 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	text-align: center;
+	background-color: white;
+}
+
+h2 {
+	color: #000;
+	font-size: 25px;
+	margin: 30px;
+}
+/* ############################# */
+.button-one {
+	padding: 15px 40px;
+	border-style: none;
+	margin: 20px auto;
+	background-color: lightseagreen;
+	color: white;
+	border-radius: 20px;
+	box-shadow: 0 0 0 6px white, 0 0 0 12px lightseagreen;
+	font-size: 40px;
+	font-family: arial;
+	text-transform: uppercase;
+	transition: 0.3s;
+	cursor: pointer;
+	margin: 30px;
+}
+
+.button-one:hover {
+	box-shadow: 0 0 0 10px white 0 0 0 18px lightseagreen;
+	border-radius: 40px;
+}
+/* ############################# */
+.button-two {
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	margin: 20px auto;
+}
+
+.button-two:hover {
+	background-color: #3e8e41;
+}
+
+.button-two:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/* ############################# */
+.button-three {
+	border: 2px solid black;
+	padding: 20px 40px;
+	background-color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-family: roboto condensed;
+	animation: shakes 5s linear infinite;
+	cursor: pointer;
+	margin: 20px auto;
+}
+
+@keyframes shakes {
+	0% {
+		transform: translateX(0) rotateX(0deg)
+	}
+
+	90% {
+		transform: translateX(0) rotateX(0deg)
+	}
+
+	91% {
+		transform: translateX(20px) rotateX(-10deg)
+	}
+
+	92% {
+		transform: translateX(-20px) rotateX(10deg)
+	}
+
+	93% {
+		transform: translateX(20px) rotateX(-10deg)
+	}
+
+	94% {
+		transform: translateX(-20px) rotateX(10deg)
+	}
+
+	95% {
+		transform: translateX(20px) rotateX(-10deg)
+	}
+
+	96% {
+		transform: translateX(-20px) rotateX(10deg)
+	}
+
+	97% {
+		transform: translateX(20px) rotateX(-10deg)
+	}
+
+	98% {
+		transform: translateX(-20px) rotateX(10deg)
+	}
+
+	99% {
+		transform: translateX(20px) rotateX(-10deg)
+	}
+
+	100% {
+		transform: translateX(0) rotateX(0deg)
+	}
+}
+/* ############################# */
+.button-four {
+	position: relative;
+	padding: 10px 25px;
+	font-size: 40px;
+	border-style: none;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	overflow: hidden;	
+	cursor: pointer;
+	margin: 20px auto;
+}
+
+.button-four::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 6px;
+	background-color: black;
+	transition: .7s cubic-bezier(0, 1.8, 1, 1);
+}
+
+.button-four:hover::before {
+	right: 0;
+}
+/* ############################# */
+.button-five {
+	position: relative;
+	padding: 10px 25px;
+	font-size: 40px;
+	border: 2px solid black;
+	background-color: transparent;
+	border-radius: 20px;
+	box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+	overflow: hidden;
+	color: black;
+	transition: .25s .05s linear;
+	margin: 20px auto;
+}
+
+.button-five::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	transition: .3s linear;
+	z-index: -1;
+}
+
+.button-five:hover::after {
+	width: 100%;
+}
+
+.button-five:hover {
+	color: white;
+	cursor: pointer;
+}
+/* ############################# */
+.button-six {
+	display: block;
+	margin: 20px auto;
+	font-size: 40px;
+	color: black;
+	padding: 10px 30px;
+	background-color: transparent;
+	border: 3px solid black;
+	position: relative;
+	overflow: hidden;
+	transition: color 0.3s linear 0.1s;
+	z-index: 1;
+}
+
+.button-six::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -100%;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 20%;
+	background-color: red;
+	transition: right 0.3s linear, height 0.3s linear 0.3s;
+	z-index: -1;
+}
+
+.button-six:hover {
+	cursor: pointer;
+	color: white;
+}
+
+.button-six:hover::after {
+	right: 0;
+	height: 100%;
+}
+/* ############################# */
+.button-seven {
+	transform: skew(-30deg);
+	font-size: 40px;
+	background-color: #fff;
+	color: black;
+	margin: 20px auto;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: roboto condensed, arial;
+	border: 3px solid black;
+	padding: 25px 50px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.button-seven span {
+	display: block;
+	transform: skew(30deg);
+}
+
+.button-seven::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -2px;
+	width: 2px;
+	background-color: black;
+	transition: 0.2s linear;
+}
+
+.button-seven::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 2px;
+	background-color: black;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+	transition-timing-function: linear;
+	transition-property: all;
+}
+
+.button-seven:hover::before {
+	left: 100%;
+}
+
+.button-seven:hover::after {
+	bottom: 100%;
+}
+/* ############################# */
+.button-eight {
+	border: 2px solid black;
+	width: 400px;
+	height: 100px;
+	background-color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-family: roboto, arial;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 20px auto;
+}
+.button-eight span {
+	display: block;
+	line-height: 100px;
+	position: relative;
+	top: 0;
+	transition: .2s linear;
+}
+
+.button-eight:hover span {
+	top: -100px;
+}
